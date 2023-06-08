@@ -32,23 +32,21 @@ function App() {
   return (
     <div className="App">
       <Title title="Events in your area" subtitle={subtitle}/>
-     {showEvents && <div>
+      {showEvents && <div>
         <button onClick={() => setShowEvents(false)}>hide events</button>
       </div>}
       {!showEvents && <div>
         <button onClick={() => setShowEvents(true)}>show events</button>
       </div>}
-        {showEvents && <EventList events={events} handleClick={handleClick}/> 
-        }
-        
-        
 
-       {showModal && <Modal handleClose={handleClose}>
-            <h2>Terms and Conditions</h2>
-            <p>sample text</p>
-            <a href="#">Find out more...</a>
-        </Modal>}
-        <button className="show-modal-button" onClick={handleShowModal}>Show Modal</button>
+      {showEvents && <EventList events={events} handleClick={handleClick}/> 
+      }
+      {showModal && <Modal handleClose={handleClose}>
+          <h2>Terms and Conditions</h2>
+          <p>sample text</p>
+          <a href="#">Find out more...</a>
+      </Modal>}
+      <button className="show-modal-button" onClick={handleShowModal}>Show Modal</button>
     </div>
   );
 
