@@ -9,10 +9,6 @@ function Modal({children, handleClose, isSalesModal}) {
           borderColor: isSalesModal ? "red" : "#555",
           textAlign: "center"}}>
             {children}
-            <button 
-              onClick={handleClose} 
-              className={isSalesModal ? "sales-btn" : ""}
-            >close</button>
         </div>
     </div>
   ), document.body)
