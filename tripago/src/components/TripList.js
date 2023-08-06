@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {useFetch} from '../hooks/useFetch';
+import {useFetch} from '../../../my-first-react-app/useFetch';
 
 // styles
 import "./TripList.css"
@@ -7,7 +7,7 @@ import "./TripList.css"
 function TripList() {
   const [url, setUrl] = useState('http://localhost:3000/trips');
   
-  const { data: trips, isPending, error } = useFetch(url)
+  const { data: trips, isPending, error } = useFetch(url, {type: 'GET'})
 
 
   return (
